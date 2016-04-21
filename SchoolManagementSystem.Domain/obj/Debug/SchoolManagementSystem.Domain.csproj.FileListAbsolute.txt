@@ -1,0 +1,9 @@
+D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\bin\Debug\SchoolManagementSystem.Domain.dll.config
+D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\bin\Debug\SchoolManagementSystem.Domain.dll
+D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\bin\Debug\SchoolManagementSystem.Domain.pdb
+D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\bin\Debug\EntityFramework.dll
+D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\bin\Debug\EntityFramework.xml
+D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\obj\Debug\SchoolManagementSystem.Domain.dll
+D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\obj\Debug\SchoolManagementSystem.Domain.pdb
