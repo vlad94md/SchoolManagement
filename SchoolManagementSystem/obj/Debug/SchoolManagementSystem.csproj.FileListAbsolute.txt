@@ -31,3 +31,30 @@ D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\Scho
 D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
 D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.dll
 D:\VS 2012 Projects\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.Domain.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.Domain.pdb
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dll
+E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb

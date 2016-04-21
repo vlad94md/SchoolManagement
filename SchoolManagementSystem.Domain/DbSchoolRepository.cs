@@ -9,7 +9,7 @@ namespace SchoolManagementSystem.Domain
 {
     public class DbSchoolRepository
     {
-        DbSchoolContext context = new DbSchoolContext();
+        public DbSchoolContext context = new DbSchoolContext();
 
         public IEnumerable<Administrator> Administrators
         {

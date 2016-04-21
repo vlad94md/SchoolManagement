@@ -10,16 +10,18 @@ namespace SchoolManagementSystem.Domain.Entities
     public class Teacher
     {
         [Key]
-        public string PersonalIdentificationNumber { get; set; }
-        string Password { get; set; }
-        string FirstName { get; set; }
-        string LastName { get; set; }
-        string Address { get; set; }
-        string PhoneNumber { get; set; }
-        string MobilePhoneNumber { get; set; }
-        string EducationalGrade { get; set; }
-        string Email { get; set; }
-        Discipline Discipline { get; set; }
-        List<Class> ClassesToStudy { get; set; }
+        public string PIN { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string PhoneNumber { get; set; }
+        public string MobilePhoneNumber { get; set; }
+        public string EducationalGrade { get; set; }
+        public string Email { get; set; }
+
+        public virtual Discipline Discipline { get; set; }
+
+        public virtual List<Class> ClassesToStudy { get; set; }
     }
 }

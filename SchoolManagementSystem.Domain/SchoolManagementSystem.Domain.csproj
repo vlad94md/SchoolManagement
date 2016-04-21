@@ -53,6 +53,7 @@
     <Compile Include="Entities\Administrator.cs" />
     <Compile Include="Entities\Class.cs" />
     <Compile Include="Entities\Discipline.cs" />
+    <Compile Include="Entities\Mark.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

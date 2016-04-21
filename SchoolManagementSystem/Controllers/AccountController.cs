@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SchoolManagementSystem.Domain;
+using SchoolManagementSystem.Domain.Entities;
 
 namespace SchoolManagementSystem.Controllers
 {
@@ -13,7 +14,7 @@ namespace SchoolManagementSystem.Controllers
 
         public ActionResult Login()
         {
-            var gg = repository.Administrators;
+            repository.context.Administrators.Add(new Administrator {FirstName = "gg", Login = "admin"});
             return View();
         }
 

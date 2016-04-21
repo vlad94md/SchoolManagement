@@ -10,15 +10,16 @@ namespace SchoolManagementSystem.Domain.Entities
     public class Student
     {
         [Key]
-        public string PersonalIdentificationNumber { get; set; }
-        string Password { get; set; }
-        string FirstName { get; set; }
-        string LastName { get; set; }
-        string Address { get; set; }
-        string PhoneNumber { get; set; }
-        string MobilePhoneNumber { get; set; }
-        Class Form { get; set; }
-        string Nationality { get; set; }
-        string Religion { get; set; }
+        public string PIN { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string PhoneNumber { get; set; }
+        public string MobilePhoneNumber { get; set; }
+        public string Nationality { get; set; }
+        public string Religion { get; set; }
+
+        public virtual Class Form { get; set; }
     }
 }
