@@ -58,3 +58,36 @@ E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagem
 E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csprojResolveAssemblyReference.cache
 E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dll
 E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\EntityFramework.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\EntityFramework.SqlServer.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\Newtonsoft.Json.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\SchoolManagementSystem.Domain.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Net.Http.Formatting.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Helpers.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Http.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Http.WebHost.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Mvc.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Razor.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.WebPages.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.WebPages.Razor.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\SchoolManagementSystem.Domain.pdb
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\EntityFramework.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Net.Http.Formatting.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Helpers.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Http.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Http.WebHost.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Mvc.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.Razor.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.WebPages.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+D:\GIT\SchoolManagement\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb

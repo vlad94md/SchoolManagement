@@ -16,6 +16,31 @@ namespace SchoolManagementSystem.Domain
             get { return context.Administrators; }
         }
 
+        public IEnumerable<Teacher> Teachers
+        {
+            get { return context.Teachers; }
+        }
+
+        public IEnumerable<Student> Students
+        {
+            get { return context.Students; }
+        }
+
+        public IEnumerable<Class> Classes
+        {
+            get { return context.Classes; }
+        }
+
+        public IEnumerable<Discipline> Disciplines
+        {
+            get { return context.Disciplines; }
+        }
+
+        public IEnumerable<Mark> Marks
+        {
+            get { return context.Marks; }
+        }
+
         //public int AddUser(User user)
         //{
         //    context.Users.Add(user);

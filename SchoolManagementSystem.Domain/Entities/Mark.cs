@@ -15,7 +15,6 @@ namespace SchoolManagementSystem.Domain.Entities
         public int Id { get; set; }
         public int Value { get; set; }
         public DateTime Date { get; set; }
-        public bool Absend { get; set; }
 
         public virtual Discipline Discipline { get; set; }
         public virtual Teacher Teacher { get; set; }

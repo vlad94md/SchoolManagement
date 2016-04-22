@@ -13,6 +13,6 @@ namespace SchoolManagementSystem.Domain.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string subject { get; set; }
+        public string Subject { get; set; }
     }
 }

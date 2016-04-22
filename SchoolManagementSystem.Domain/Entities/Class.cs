@@ -13,8 +13,8 @@ namespace SchoolManagementSystem.Domain.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string name { get; set; }
+        public string Name { get; set; }
 
-        public virtual List<Teacher> TeachersToStudy { get; set; }
+        public virtual List<Teacher> TeachersThatStudy { get; set; }
     }
 }

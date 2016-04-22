@@ -17,3 +17,13 @@ E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagem
 E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\obj\Debug\SchoolManagementSystem.Domain.csprojResolveAssemblyReference.cache
 E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\obj\Debug\SchoolManagementSystem.Domain.dll
 E:\IT\Microsoft Visual Studio 2012\Projects\SchoolManagementSystem\SchoolManagementSystem.Domain\obj\Debug\SchoolManagementSystem.Domain.pdb
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\bin\Debug\SchoolManagementSystem.Domain.dll.config
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\bin\Debug\SchoolManagementSystem.Domain.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\bin\Debug\SchoolManagementSystem.Domain.pdb
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\bin\Debug\EntityFramework.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\bin\Debug\EntityFramework.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\obj\Debug\SchoolManagementSystem.Domain.csprojResolveAssemblyReference.cache
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\obj\Debug\SchoolManagementSystem.Domain.dll
+D:\GIT\SchoolManagement\SchoolManagementSystem.Domain\obj\Debug\SchoolManagementSystem.Domain.pdb
