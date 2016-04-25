@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -30,7 +31,23 @@ namespace SchoolManagementSystem.Controllers
                 System.Web.HttpContext.Current.Session["user"] = currUser;
             }
 
+            SetupRightsForUserRole(currUser);
+
             return View();
+        }
+
+        private ActionResult SetupRightsForUserRole(UserModel user)
+        {
+            switch (user.Role)
+            {
+                case "Director":
+                    break;
+                case "Director":
+                    break;
+                case "Director":
+                    break;
+
+            }
         }
 
         private UserModel VerifyUser(string login, string password)
