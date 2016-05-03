@@ -10,11 +10,10 @@ namespace SchoolManagementSystem.Domain
 {
     public class DbSchoolContext : DbContext
     {
-        //public DbSchoolContext()
-        //    : base("DbSchoolContext") 
-        //{
-        //    //Database.SetInitializer<DbSchoolContext>(new DropCreateDatabaseIfModelChanges<DbSchoolContext>());
-        //}
+        public DbSchoolContext()
+        {
+            Database.SetInitializer<DbSchoolContext>(new DropCreateDatabaseIfModelChanges<DbSchoolContext>());
+        }
 
         public DbSet<Administrator> Administrators { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
