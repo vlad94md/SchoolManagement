@@ -17,48 +17,65 @@ namespace SchoolManagementSystem.Controllers
         [HttpGet]
         public ActionResult Login()
         {
+            // Redirects to right controller if user are logged into system 
+            var currUser = (UserModel)System.Web.HttpContext.Current.Session["user"];
 
+            if (currUser != null)
+            {
+                System.Web.HttpContext.Current.Session["user"] = currUser;
+                return SetupRightsForUserRole(currUser);
+            }
+            
             return View();
         }
 
         [HttpPost]
         public ActionResult Login(string login, string password)
         {
+            // Redirects to right controller after loggin into system
             var currUser = VerifyUser(login, password);
 
-            if (currUser != null)
+            if (currUser == null)
             {
-                System.Web.HttpContext.Current.Session["user"] = currUser;
+                return RedirectToAction("LoginFailed");
             }
 
-            SetupRightsForUserRole(currUser);
+            System.Web.HttpContext.Current.Session["user"] = currUser;
 
-            return View();
+            return SetupRightsForUserRole(currUser);
         }
 
         private ActionResult SetupRightsForUserRole(UserModel user)
         {
+            ActionResult result = null;
             switch (user.Role)
             {
                 case "Director":
+                    result = RedirectToAction("Index", "Director");
                     break;
-                case "Director":
+                case "Secretary":
+                    result = RedirectToAction("Index", "Secretary");
                     break;
-                case "Director":
+                case "Teacher":
+                    result = RedirectToAction("Index", "Teacher");
                     break;
-
+                case "Student":
+                    result = RedirectToAction("Index", "Student");
+                    break;          
             }
+            return result;
         }
 
         private UserModel VerifyUser(string login, string password)
         {
-            UserModel signedUser = null;
+            UserModel signedUser;
 
             var adminUser = repository.Administrators.FirstOrDefault(x => x.Login == login && x.Password == password);
 
             if (adminUser != null)
             {
                 signedUser = new UserModel { Login = adminUser.Login, FirstName = adminUser.FirstName, LastName = adminUser.LastName, Role = adminUser.Role };
+                return signedUser;
             }
 
             var teacherUser = repository.Teachers.FirstOrDefault(x => x.PIN == login && x.Password == password);
@@ -66,6 +83,7 @@ namespace SchoolManagementSystem.Controllers
             if (teacherUser != null)
             {
                 signedUser = new UserModel { Login = teacherUser.PIN, FirstName = teacherUser.FirstName, LastName = teacherUser.LastName, Role = "Teacher" };
+                return signedUser;
             }
 
             var studentUser = repository.Students.FirstOrDefault(x => x.PIN == login && x.Password == password);
@@ -73,9 +91,22 @@ namespace SchoolManagementSystem.Controllers
             if (studentUser != null)
             {
                 signedUser = new UserModel { Login = studentUser.PIN, FirstName = studentUser.FirstName, LastName = studentUser.LastName, Role = "Student" };
+                return signedUser;
             }
 
-            return signedUser;
+            return null;
+        }
+
+        public ActionResult LoginFailed()
+        {
+            return View();
+        }
+
+        public ActionResult Logout()
+        {
+            System.Web.HttpContext.Current.Session["user"] = null;
+
+            return RedirectToAction("Login");
         }
 
         public string Setup()
@@ -94,7 +125,7 @@ namespace SchoolManagementSystem.Controllers
             repository.context.Disciplines.Add(new Discipline { Subject = "Biology" });
 
             repository.context.SaveChanges();
-            return "db setup";
+            return "database was setuped";
         }
 
     }
