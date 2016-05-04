@@ -26,9 +26,17 @@ namespace SchoolManagementSystem.Controllers
 
         public ActionResult Overview()
         {
-            var thisMonthMarks = repository.Marks.Where(x => x.Date.Month == DateTime.Now.Month).ToList();
+            var currUser = (UserModel)System.Web.HttpContext.Current.Session["user"];
 
-            return View();
+            var thisMonthMarks = repository.Marks.Where(x => x.Date.Month == DateTime.Now.Month 
+                                                        && x.Student_PIN == currUser.Login).ToList();
+
+            StudentMonthOverviewModel result = new StudentMonthOverviewModel()
+            {
+                StudentMarks = thisMonthMarks,
+                Subjects = repository.Disciplines.ToList()
+            };
+            return View(result);
         }
 
 

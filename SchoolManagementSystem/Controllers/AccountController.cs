@@ -130,15 +130,61 @@ namespace SchoolManagementSystem.Controllers
             repository.context.Classes.Add(new Class { Name = "12-A" });
 
             repository.context.Disciplines.Add(new Discipline { Subject = "Biology" });
+            repository.context.Disciplines.Add(new Discipline { Subject = "History" });
+            repository.context.Disciplines.Add(new Discipline { Subject = "Mathematic" });
+            repository.context.Disciplines.Add(new Discipline { Subject = "Chemistry" });
+            repository.context.Disciplines.Add(new Discipline { Subject = "Physics" });
 
+            #region Marks
             repository.context.Marks.Add(new Mark
             {
                 Student_PIN = "2010",
-                Date = DateTime.Now,
+                Date = new DateTime(2015, 5, 1),
                 Teacher_PIN = "2011",
                 Discipline_Id = 1,
                 Value = 10
             });
+            repository.context.Marks.Add(new Mark
+            {
+                Student_PIN = "2010",
+                Date = new DateTime(2015, 5, 4),
+                Teacher_PIN = "2011",
+                Discipline_Id = 2,
+                Value = -1
+            });
+            repository.context.Marks.Add(new Mark
+            {
+                Student_PIN = "2010",
+                Date = new DateTime(2015, 5, 11),
+                Teacher_PIN = "2011",
+                Discipline_Id = 2,
+                Value = 9
+            });
+            repository.context.Marks.Add(new Mark
+            {
+                Student_PIN = "2010",
+                Date = new DateTime(2015, 5, 15),
+                Teacher_PIN = "2011",
+                Discipline_Id = 3,
+                Value = 9
+            });
+            repository.context.Marks.Add(new Mark
+            {
+                Student_PIN = "2010",
+                Date = new DateTime(2015, 5, 21),
+                Teacher_PIN = "2011",
+                Discipline_Id = 1,
+                Value = 6
+            });
+            repository.context.Marks.Add(new Mark
+            {
+                Student_PIN = "2010",
+                Date = new DateTime(2015, 5, 28),
+                Teacher_PIN = "2011",
+                Discipline_Id = 4,
+                Value = -1
+            });
+            #endregion
 
             repository.context.SaveChanges();
             return "database was setuped";

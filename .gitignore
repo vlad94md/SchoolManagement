@@ -53,3 +53,5 @@ SchoolManagementSystem.Domain/bin/Debug/SchoolManagementSystem.Domain.dll
 SchoolManagementSystem.Domain/bin/Debug/SchoolManagementSystem.Domain.dll
 *.cache
 SchoolManagementSystem/Web.config
+*.cache
+*.pdb
