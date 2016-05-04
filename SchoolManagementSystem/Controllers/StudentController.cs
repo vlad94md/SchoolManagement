@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SchoolManagementSystem.Domain;
 using SchoolManagementSystem.Models;
 
 namespace SchoolManagementSystem.Controllers
 {
     public class StudentController : Controller
     {
-        //
-        // GET: /Student/
+        DbSchoolRepository repository = new DbSchoolRepository();
+
 
         public ActionResult Index()
         {
@@ -22,6 +23,14 @@ namespace SchoolManagementSystem.Controllers
 
             return View();
         }
+
+        public ActionResult Overview()
+        {
+            var thisMonthMarks = repository.Marks.Where(x => x.Date.Month == DateTime.Now.Month).ToList();
+
+            return View();
+        }
+
 
         private ActionResult CheckUserRights()
         {

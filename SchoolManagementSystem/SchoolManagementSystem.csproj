@@ -950,6 +950,9 @@
   <ItemGroup>
     <Content Include="Views\Account\LoginFailed.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\Overview.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

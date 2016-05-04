@@ -112,9 +112,16 @@ namespace SchoolManagementSystem.Controllers
         public string Setup()
         {
             /// rid of public here
-            repository.context.Administrators.Add(new Administrator { FirstName = "Director", Login = "admin", Password = "admin", Role = "Director" });
-            repository.context.Administrators.Add(new Administrator { FirstName = "Secretary1", Login = "secretary1", Password = "admin", Role = "Secretary" });
-            repository.context.Administrators.Add(new Administrator { FirstName = "Secretary2", Login = "secretary2", Password = "admin", Role = "Secretary" });
+            //repository.context.Database.ExecuteSqlCommand("delete from Administrators");
+            //repository.context.Database.ExecuteSqlCommand("delete from Students");
+            //repository.context.Database.ExecuteSqlCommand("delete from Teachers");
+            //repository.context.Database.ExecuteSqlCommand("delete from Classes");
+            //repository.context.Database.ExecuteSqlCommand("delete from Marks");
+            //repository.context.Database.ExecuteSqlCommand("delete from Disciplines");
+
+            repository.context.Administrators.Add(new Administrator { FirstName = "Director", Login = "admin", Password = "123", Role = "Director" });
+            repository.context.Administrators.Add(new Administrator { FirstName = "Secretary1", Login = "secretary1", Password = "123", Role = "Secretary" });
+            repository.context.Administrators.Add(new Administrator { FirstName = "Secretary2", Login = "secretary2", Password = "123", Role = "Secretary" });
 
             repository.context.Students.Add(new Student { PIN = "2010", FirstName = "Adam", LastName = "Sandler", Password = "123" });
 
@@ -123,6 +130,15 @@ namespace SchoolManagementSystem.Controllers
             repository.context.Classes.Add(new Class { Name = "12-A" });
 
             repository.context.Disciplines.Add(new Discipline { Subject = "Biology" });
+
+            repository.context.Marks.Add(new Mark
+            {
+                Student_PIN = "2010",
+                Date = DateTime.Now,
+                Teacher_PIN = "2011",
+                Discipline_Id = 1,
+                Value = 10
+            });
 
             repository.context.SaveChanges();
             return "database was setuped";

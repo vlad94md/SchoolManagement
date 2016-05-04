@@ -48,3 +48,7 @@ Temporary Items
 SchoolManagementSystem.Domain/bin/Debug/SchoolManagementSystem.Domain.dll
 SchoolManagementSystem.Domain/bin/Debug/SchoolManagementSystem.Domain.dll
 SchoolManagementSystem.Domain/bin/Debug/SchoolManagementSystem.Domain.dll
+*.cache
+*.cache
+SchoolManagementSystem.Domain/bin/Debug/SchoolManagementSystem.Domain.dll
+*.cache

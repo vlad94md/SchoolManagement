@@ -20,6 +20,6 @@ namespace SchoolManagementSystem.Domain.Entities
         public string Nationality { get; set; }
         public string Religion { get; set; }
 
-        public virtual Class Form { get; set; }
+        public virtual int Class_Id { get; set; }
     }
 }

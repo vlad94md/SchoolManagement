@@ -16,8 +16,13 @@ namespace SchoolManagementSystem.Domain.Entities
         public int Value { get; set; }
         public DateTime Date { get; set; }
 
-        public virtual Discipline Discipline { get; set; }
-        public virtual Teacher Teacher { get; set; }
-        public virtual Student Student { get; set; }
+        public virtual int Discipline_Id { get; set; }
+        //public virtual Discipline Discipline { get; set; }
+
+        public virtual string Teacher_PIN { get; set; }
+        //public virtual Teacher Teacher { get; set; }
+
+        public virtual string Student_PIN { get; set; }
+        //public virtual Student Student { get; set; }
     }
 }

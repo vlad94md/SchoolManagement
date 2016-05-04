@@ -20,7 +20,7 @@ namespace SchoolManagementSystem.Domain.Entities
         public string EducationalGrade { get; set; }
         public string Email { get; set; }
 
-        public virtual Discipline Discipline { get; set; }
+        public virtual int Discipline_Id { get; set; }
 
         public virtual List<Class> ClassesToStudy { get; set; }
     }
