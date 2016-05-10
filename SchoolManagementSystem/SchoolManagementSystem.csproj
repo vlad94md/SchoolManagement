@@ -50,6 +50,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices.Protocols" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -124,7 +125,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\StudentIndexViewModelcs.cs" />
     <Compile Include="Models\StudentMonthOverviewModel.cs" />
+    <Compile Include="Models\TeacherSearchStudentsViewModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -574,7 +577,9 @@
     <Content Include="Content\js\flot-data.js" />
     <Content Include="Content\js\morris-data.js" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -953,6 +958,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Student\Overview.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\SelectMonth.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\MonthOverview.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Teacher\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Teacher\SearchStudents.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Teacher\ViewStudent.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Teacher\ViewStudentFailed.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

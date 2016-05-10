@@ -1,0 +1,47 @@
+﻿@model SchoolManagementSystem.Domain.Entities.Teacher
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Teacher/TeacherLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Details</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div>
+    <label>PIN:</label> @Model.PIN
+</div>
+<div>
+    <label>First Name:</label> @Model.FirstName
+</div>
+<div>
+    <label>Last Name:</label> @Model.LastName
+</div>
+<div>
+    <label>Descipline:</label> @ViewBag.desciplineName
+</div>
+<div>
+    <label>Address:</label> @Model.Address
+</div>
+<div>
+    <label>Phone Number:</label> @Model.PhoneNumber
+</div>
+<div>
+    <label>Mobile Phone:</label> @Model.MobilePhoneNumber
+</div>
+<div>
+    <label>Grade:</label> @Model.EducationalGrade
+</div>
+
+<div>
+    <label>Classes I study:</label>
+    <ul>
+        @foreach (var item in @Model.ClassesToStudy)
+        {
+            <li>@item.Name</li>
+        }
+    </ul>
+</div>

@@ -15,10 +15,7 @@ namespace SchoolManagementSystem.Controllers
         public ActionResult Index()
         {
             var redirector = CheckUserRights();
-            if (redirector != null)
-            {
-                return redirector;
-            }
+            if (redirector != null) return redirector;
 
             return View();
         }

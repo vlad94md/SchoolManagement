@@ -1,5 +1,7 @@
-﻿@{
+﻿@using SchoolManagementSystem.Models
+@{
     Layout = null;
+    var currUser = (UserModel)System.Web.HttpContext.Current.Session["user"];
 }
 
 <!DOCTYPE html>
@@ -53,16 +55,18 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-
-
-                Welcome, User!
+                Welcome, @currUser.FirstName @currUser.LastName!
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-user">                      
-                        <li><i class="fa fa-sign-out fa-fw"></i> @Html.ActionLink("Logout", "Logout", "Account")
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <div class="row container-fluid">
+                                <i class="fa fa-sign-out" style="padding-left: 15px"></i>
+                                @Html.ActionLink("Logout", "Logout", "Account")
+                            </div>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

@@ -111,82 +111,87 @@ namespace SchoolManagementSystem.Controllers
 
         public string Setup()
         {
-            /// rid of public here
-            //repository.context.Database.ExecuteSqlCommand("delete from Administrators");
-            //repository.context.Database.ExecuteSqlCommand("delete from Students");
-            //repository.context.Database.ExecuteSqlCommand("delete from Teachers");
-            //repository.context.Database.ExecuteSqlCommand("delete from Classes");
-            //repository.context.Database.ExecuteSqlCommand("delete from Marks");
-            //repository.context.Database.ExecuteSqlCommand("delete from Disciplines");
+            repository.DeleteDatabase();
 
-            repository.context.Administrators.Add(new Administrator { FirstName = "Director", Login = "admin", Password = "123", Role = "Director" });
-            repository.context.Administrators.Add(new Administrator { FirstName = "Secretary1", Login = "secretary1", Password = "123", Role = "Secretary" });
-            repository.context.Administrators.Add(new Administrator { FirstName = "Secretary2", Login = "secretary2", Password = "123", Role = "Secretary" });
+            repository.AddAdministrator(new Administrator { FirstName = "Director", Login = "admin", Password = "123", Role = "Director" });
+            repository.AddAdministrator(new Administrator { FirstName = "Secretary1", Login = "secretary1", Password = "123", Role = "Secretary" });
+            repository.AddAdministrator(new Administrator { FirstName = "Secretary2", Login = "secretary2", Password = "123", Role = "Secretary" });
 
-            repository.context.Students.Add(new Student { PIN = "2010", FirstName = "Adam", LastName = "Sandler", Password = "123" });
+            repository.AddStudent(new Student { PIN = "2010", FirstName = "Adam", LastName = "Sandler", Password = "123", Class_Id = 1, PhoneNumber = "0792893345", Address = "Chisniau, str Mircea cel Baatrin 3, ap 104"});
+            repository.AddStudent(new Student { PIN = "2011", FirstName = "Jim",  LastName = "Carrey", Password = "123", Class_Id = 1, PhoneNumber = "0792893345", Address = "Chisniau, str Mircea cel Baatrin 3, ap 104" });
+            repository.AddStudent(new Student { PIN = "2012", FirstName = "Anne", LastName = "Hathaway", Password = "123", Class_Id = 1, PhoneNumber = "0792893345", Address = "Chisniau, str Mircea cel Baatrin 3, ap 104" });
+            repository.AddStudent(new Student { PIN = "2013", FirstName = "Robert", LastName = "John Downey", Password = "123", Class_Id = 2, PhoneNumber = "0792893345", Address = "Chisniau, str Mircea cel Baatrin 3, ap 104" });
+            repository.AddStudent(new Student { PIN = "2014", FirstName = "Chris", LastName = "Evans", Password = "123", Class_Id = 3, PhoneNumber = "0792893345", Address = "Chisniau, str Mircea cel Baatrin 3, ap 104" });
+            repository.AddStudent(new Student { PIN = "2015", FirstName = "Chris", LastName = "Hemsworth", Password = "123", Class_Id = 4, PhoneNumber = "0792893345", Address = "Chisniau, str Mircea cel Baatrin 3, ap 104" });
 
-            repository.context.Teachers.Add(new Teacher { PIN = "2011", FirstName = "Emma", LastName = "Watson", Password = "123" });
 
-            repository.context.Classes.Add(new Class { Name = "12-A" });
+            repository.AddClass(new Class { Name = "12-A" });
+            repository.AddClass(new Class { Name = "12-B" });
+            repository.AddClass(new Class { Name = "11-A" });
+            repository.AddClass(new Class { Name = "11-B" });
 
-            repository.context.Disciplines.Add(new Discipline { Subject = "Biology" });
-            repository.context.Disciplines.Add(new Discipline { Subject = "History" });
-            repository.context.Disciplines.Add(new Discipline { Subject = "Mathematic" });
-            repository.context.Disciplines.Add(new Discipline { Subject = "Chemistry" });
-            repository.context.Disciplines.Add(new Discipline { Subject = "Physics" });
+            List<Class> classes = repository.Classes.ToList();
+            repository.AddTeacher(new Teacher { PIN = "2021", FirstName = "Emma", LastName = "Watson", Password = "123", Discipline_Id = 1, EducationalGrade = "USM Biology faculty", ClassesToStudy = classes });
+
+
+            repository.AddDiscipline(new Discipline { Subject = "Biology" });
+            repository.AddDiscipline(new Discipline { Subject = "History" });
+            repository.AddDiscipline(new Discipline { Subject = "Mathematic" });
+            repository.AddDiscipline(new Discipline { Subject = "Chemistry" });
+            repository.AddDiscipline(new Discipline { Subject = "Physics" });
 
             #region Marks
-            repository.context.Marks.Add(new Mark
+            repository.AddMark(new Mark
             {
                 Student_PIN = "2010",
-                Date = new DateTime(2015, 5, 1),
+                Date = new DateTime(2016, 5, 1),
                 Teacher_PIN = "2011",
                 Discipline_Id = 1,
                 Value = 10
             });
-            repository.context.Marks.Add(new Mark
+            repository.AddMark(new Mark
             {
                 Student_PIN = "2010",
-                Date = new DateTime(2015, 5, 4),
+                Date = new DateTime(2016, 5, 4),
                 Teacher_PIN = "2011",
                 Discipline_Id = 2,
                 Value = -1
             });
-            repository.context.Marks.Add(new Mark
+            repository.AddMark(new Mark
             {
                 Student_PIN = "2010",
-                Date = new DateTime(2015, 5, 11),
+                Date = new DateTime(2016, 5, 11),
                 Teacher_PIN = "2011",
                 Discipline_Id = 2,
                 Value = 9
             });
-            repository.context.Marks.Add(new Mark
+            repository.AddMark(new Mark
             {
                 Student_PIN = "2010",
-                Date = new DateTime(2015, 5, 15),
+                Date = new DateTime(2016, 5, 15),
                 Teacher_PIN = "2011",
                 Discipline_Id = 3,
                 Value = 9
             });
-            repository.context.Marks.Add(new Mark
+            repository.AddMark(new Mark
             {
                 Student_PIN = "2010",
-                Date = new DateTime(2015, 5, 21),
+                Date = new DateTime(2016, 5, 21),
                 Teacher_PIN = "2011",
                 Discipline_Id = 1,
                 Value = 6
             });
-            repository.context.Marks.Add(new Mark
+            repository.AddMark(new Mark
             {
                 Student_PIN = "2010",
-                Date = new DateTime(2015, 5, 28),
+                Date = new DateTime(2016, 5, 28),
                 Teacher_PIN = "2011",
                 Discipline_Id = 4,
                 Value = -1
             });
             #endregion
 
-            repository.context.SaveChanges();
+            //repository.context.SaveChanges();
             return "database was setuped";
         }
 

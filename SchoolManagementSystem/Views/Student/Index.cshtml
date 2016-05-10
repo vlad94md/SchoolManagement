@@ -1,4 +1,5 @@
-﻿@{
+﻿@model SchoolManagementSystem.Models.StudentIndexViewModelcs
+@{
     Layout = "StudentLayout.cshtml";
 }
 
@@ -23,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#">
+            <a href="@Url.Action("Details", "Student")">
                 <div class="panel-footer">
                     <span class="pull-left">View</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -45,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#">
+            <a href="@Url.Action("Overview", "Student")">
                 <div class="panel-footer">
                     <span class="pull-left">View</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -56,7 +57,41 @@
     </div>
 </div>
 <!-- /.row -->
-<div class="row">
 
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-bar-chart-o fa-fw"></i>Current month situation
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row container-fluid" style="margin-bottom: 10px">
+                    <span class="label label-primary col-lg-2" style="font-size: 15px">Total marks:</span>
+                    <span class="col-lg-2"> <b>@Model.TotalMarks</b></span>
+                </div>
+
+                 <div class="row container-fluid" style="margin-bottom: 10px">
+                    <span class="label label-success col-lg-2" style="font-size: 15px">Good marks: </span>
+                    <span class="col-lg-2"> <b>@Model.GoodMarks</b></span>
+                </div>
+
+                <div class="row container-fluid" style="margin-bottom: 10px">
+                    <span class="label label-warning col-lg-2" style="font-size: 15px">Negative marks:</span>
+                    <span class="col-lg-2"> <b>@Model.BadMarks</b></span>
+                </div>
+
+                <div class="row container-fluid" style="margin-bottom: 10px">
+                    <span class="label label-danger col-lg-2" style="font-size: 15px">Absences:</span>
+                    <span class="col-lg-2"> <b>@Model.Abscences</b></span>
+                </div>
+            </div>
+            <!-- /.col-lg-12 (nested) -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.panel-body -->
 </div>
+
 <!-- /.row -->

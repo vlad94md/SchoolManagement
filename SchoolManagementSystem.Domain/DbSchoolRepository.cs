@@ -9,7 +9,7 @@ namespace SchoolManagementSystem.Domain
 {
     public class DbSchoolRepository
     {
-        public DbSchoolContext context = new DbSchoolContext();
+        private DbSchoolContext context = new DbSchoolContext();
 
         public IEnumerable<Administrator> Administrators
         {
@@ -41,11 +41,41 @@ namespace SchoolManagementSystem.Domain
             get { return context.Marks; }
         }
 
-        //public int AddUser(User user)
-        //{
-        //    context.Users.Add(user);
-        //    return context.SaveChanges();
-        //}
+        public int AddAdministrator(Administrator item)
+        {
+            context.Administrators.Add(item);
+            return context.SaveChanges();
+        }
+
+        public int AddTeacher(Teacher item)
+        {
+            context.Teachers.Add(item);
+            return context.SaveChanges();
+        }
+
+        public int AddStudent(Student item)
+        {
+            context.Students.Add(item);
+            return context.SaveChanges();
+        }
+
+        public int AddClass(Class item)
+        {
+            context.Classes.Add(item);
+            return context.SaveChanges();
+        }
+
+        public int AddDiscipline(Discipline item)
+        {
+            context.Disciplines.Add(item);
+            return context.SaveChanges();
+        }
+
+        public int AddMark(Mark item)
+        {
+            context.Marks.Add(item);
+            return context.SaveChanges();
+        }
 
         //public IEnumerable<ToDoRecord> Records
         //{
@@ -75,5 +105,11 @@ namespace SchoolManagementSystem.Domain
         //    context.Records.Remove(recordToDelete);
         //    return context.SaveChanges();
         //}
+
+        public void DeleteDatabase()
+        {
+            this.context.Database.Delete();
+            this.context.SaveChanges();
+        }
     }
 }

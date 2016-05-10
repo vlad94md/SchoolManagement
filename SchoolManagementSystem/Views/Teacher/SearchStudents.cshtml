@@ -1,0 +1,49 @@
+﻿@model SchoolManagementSystem.Models.TeacherSearchStudentsViewModel
+@{
+    ViewBag.Title = "SearchStudents";
+    Layout = "~/Views/Teacher/TeacherLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">My Students</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+
+@foreach (var form in @Model.ClassNames)
+{
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-users fa-fw"></i>@form.Key
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <ul>
+                    @foreach (var student in @Model.StudentsToStudy)
+	                {
+                        if(student.Class_Id == form.Value)
+                        {
+                            <li>
+                                <a href="@Url.Action("ViewStudent", new { id = @student.PIN })">
+                                    @student.FirstName @student.LastName
+                                </a>
+                            </li>
+                        }
+	                }
+                    </ul>
+
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.col-lg-12 (nested) -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.panel-body -->
+</div>
+}

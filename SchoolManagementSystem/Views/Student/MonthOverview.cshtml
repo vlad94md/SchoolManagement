@@ -1,8 +1,7 @@
 ﻿@model SchoolManagementSystem.Models.StudentMonthOverviewModel
 @{
-    ViewBag.Title = "Overview";
+    ViewBag.Title = "MonthOverview";
     Layout = "~/Views/Student/StudentLayout.cshtml";
-
     var currMonth = "Month";
 
     switch (@Model.Month)
@@ -44,6 +43,7 @@
             currMonth = "December";
             break;
     }
+
 }
 
 <!-- Page Content -->
@@ -191,6 +191,5 @@
     </div>
     <!-- /.panel-body -->
 </div>
-
 
 

@@ -10,5 +10,7 @@ namespace SchoolManagementSystem.Models
     {
         public List<Discipline> Subjects { get; set; }
         public List<Mark> StudentMarks { get; set; }
+        public int Year { get; set; }
+        public int Month { get; set;}
     }
 }
