@@ -63,21 +63,49 @@ namespace SchoolManagementSystem.Controllers
             return View(model);
         }
 
+        public ActionResult ViewStudentMarks(string id, int year, int month)
+        {
+            var redirector = CheckUserRights();
+            if (redirector != null) return redirector;
+
+            var currUser = (UserModel)System.Web.HttpContext.Current.Session["user"];
+            ViewBag.id = id;
+
+            var curStudent = repository.Students.FirstOrDefault(x => x.PIN == id);
+            if (curStudent == null)
+                return View("ViewStudentFailed");
+
+            var thisMonthMarks = repository.Marks.Where(x => x.Date.Month == month
+                                                        && x.Date.Year == year
+                                                        && x.Student_PIN == curStudent.PIN).ToList();
+
+            StudentMonthOverviewModel model = new StudentMonthOverviewModel()
+            {
+                StudentMarks = thisMonthMarks,
+                Subjects = repository.Disciplines.ToList(),
+                Month = month,
+                Year = year
+            };
+
+            ViewBag.name = curStudent.FirstName + " " + curStudent.LastName;
+            return View(model);
+        }
+
         public ActionResult ViewStudent(string id)
         {
             var redirector = CheckUserRights();
             if (redirector != null) return redirector;
 
             var currUser = (UserModel)System.Web.HttpContext.Current.Session["user"];
+            ViewBag.id = id;
 
             var curStudent = repository.Students.FirstOrDefault(x => x.PIN == id);
-
             if (curStudent == null)
                 return View("ViewStudentFailed");
 
+            ViewBag.name = curStudent.FirstName + " " + curStudent.LastName;
             return View();
         }
-
 
         public ActionResult AddMark(int studentId)
         {
