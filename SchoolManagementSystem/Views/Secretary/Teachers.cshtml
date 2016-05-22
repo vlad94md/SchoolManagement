@@ -1,0 +1,52 @@
+﻿@model List<SchoolManagementSystem.Domain.Entities.Teacher>
+@{
+    ViewBag.Title = "Teachers";
+    Layout = "~/Views/Secretary/SecretaryLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Teachers:</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>PIN</th>
+                                <th>FirstName</th>
+                                <th>LastName</th>
+                                <th>Address</th>
+                                <th>Email</th>
+                                <th>Mobile</th>
+                                <th>Phone</th>
+                                <th>Grade</th>
+                                <th>Discipline</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var teacher in Model)
+                            {
+                                <tr>
+                                    <td>@teacher.PIN</td>
+                                    <td>@teacher.FirstName</td>
+                                    <td>@teacher.LastName</td>
+                                    <td>@teacher.Address</td>
+                                    <td>@teacher.Email</td>
+                                    <td>@teacher.MobilePhoneNumber</td>
+                                    <td>@teacher.PhoneNumber</td>
+                                    <td>@teacher.EducationalGrade</td>
+                                    <td>@teacher.Discipline_Id</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.col-lg-12 (nested) -->
+        </div>
+        <!-- /.row -->

@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "AddMark";
+    Layout = "~/Views/Teacher/TeacherLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">@ViewBag.discipline: Add Mark</h1>
+        <h3>@ViewBag.name PIN:@ViewBag.id</h3>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+
+<div class="panel-body">
+    @if (@ViewBag.error != null && @ViewBag.error != "")
+    {
+        <h3 class="text-danger">@ViewBag.error</h3>
+    }
+
+    @if (@ViewBag.success != null && @ViewBag.success != "")
+    {
+        <h3 class="text-success">@ViewBag.success</h3>
+    }
+    <div class="row col-lg-2 col-md-2 col-xs-6">
+
+        @using (Html.BeginForm("AddMark", "Teacher"))
+        {
+            <div class="form-group">
+                <label for="sel1">Select Date:</label>
+                <div class="input-group date" data-provide="datepicker">
+                    <input type="text" name="date" class="form-control" required="required">
+                    <div class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $('#datepicker').datepicker();
+                </script>
+            </div>
+
+            <div class="form-group">
+                <label for="sel2">Select Mark:</label>
+                <select name="mark" class="form-control" id="sel2">
+                    <option value="10">10</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7</option>
+                    <option value="6">6</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                    <option value="-1" class="text-danger">Absence</option>
+                </select>
+            </div>
+
+            <input type="text" name="id" value="@ViewBag.id" style="display: none"/>
+
+            <button class="btn btn-success" type="submit">Submit</button>
+        }
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.panel-body -->

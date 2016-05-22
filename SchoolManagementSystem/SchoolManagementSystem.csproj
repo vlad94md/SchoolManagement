@@ -571,9 +571,11 @@
     <Content Include="Content\bower_components\raphael\license.txt" />
     <Content Include="Content\bower_components\raphael\raphael-min.js" />
     <Content Include="Content\bower_components\raphael\raphael.js" />
+    <Content Include="Content\dist\css\bootstrap-datepicker.css" />
     <Content Include="Content\dist\css\sb-admin-2.css" />
     <Content Include="Content\dist\css\timeline.css" />
     <Content Include="Content\dist\js\sb-admin-2.js" />
+    <Content Include="Content\js\bootstrap-datepicker.min.js" />
     <Content Include="Content\js\flot-data.js" />
     <Content Include="Content\js\morris-data.js" />
     <Content Include="Global.asax" />
@@ -982,6 +984,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Teacher\ViewStudentMarks.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Teacher\AddMark.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Secretary\Students.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Secretary\Teachers.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Secretary\AddStudent.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Secretary\AddTeacher.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Secretary\Search.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,33 +11,34 @@
     </div>
     <!-- /.col-lg-12 -->
 </div>
-<div>
-    <label>PIN:</label> @Model.PIN
+<div class="row">
+    <label class="col-lg-1 text-right">PIN:</label>@Model.PIN
 </div>
-<div>
-    <label>First Name:</label> @Model.FirstName
+<div class="row">
+    <label  class="col-lg-1 text-right">First Name:</label> @Model.FirstName
 </div>
-<div>
-    <label>Last Name:</label> @Model.LastName
+<div class="row">
+    <label  class="col-lg-1 text-right">Last Name:</label> @Model.LastName
 </div>
-<div>
-    <label>Descipline:</label> @ViewBag.desciplineName
+<div class="row">
+    <label  class="col-lg-1 text-right">Descipline:</label> @ViewBag.desciplineName
 </div>
-<div>
-    <label>Address:</label> @Model.Address
+<div class="row">
+    <label  class="col-lg-1 text-right">Address:</label> @Model.Address
 </div>
-<div>
-    <label>Phone Number:</label> @Model.PhoneNumber
+<div class="row">
+    <label  class="col-lg-1 text-right">Phone Number:</label> @Model.PhoneNumber
 </div>
-<div>
-    <label>Mobile Phone:</label> @Model.MobilePhoneNumber
+<div class="row">
+    <label  class="col-lg-1 text-right">Mobile Phone:</label> @Model.MobilePhoneNumber
 </div>
-<div>
-    <label>Grade:</label> @Model.EducationalGrade
+<div class="row">
+    <label  class="col-lg-1 text-right">Grade:</label> @Model.EducationalGrade
 </div>
 
-<div>
-    <label>Classes I study:</label>
+<hr/>
+<div class="row" style="padding-left: 25px">
+    <label >Classes I study:</label>
     <ul>
         @foreach (var item in @Model.ClassesToStudy)
         {
