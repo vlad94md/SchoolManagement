@@ -127,7 +127,9 @@
     </Compile>
     <Compile Include="Models\StudentIndexViewModelcs.cs" />
     <Compile Include="Models\StudentMonthOverviewModel.cs" />
+    <Compile Include="Models\StudentViewModel.cs" />
     <Compile Include="Models\TeacherSearchStudentsViewModel.cs" />
+    <Compile Include="Models\TeacherViewModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

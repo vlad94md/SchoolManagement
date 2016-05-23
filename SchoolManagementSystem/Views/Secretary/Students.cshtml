@@ -1,4 +1,4 @@
-﻿@model List<SchoolManagementSystem.Domain.Entities.Student>
+﻿@model List<SchoolManagementSystem.Models.StudentViewModel>
 
 @{
     ViewBag.Title = "Students";
@@ -32,15 +32,15 @@
                             @foreach (var student in Model)
                             {
                                 <tr>
-                                    <td>@student.PIN</td>
-                                    <td>@student.FirstName</td>
-                                    <td>@student.LastName</td>
-                                    <td>@student.Address</td>
-                                    <td>@student.Class_Id</td>
-                                    <td>@student.MobilePhoneNumber</td>
-                                    <td>@student.PhoneNumber</td>
-                                    <td>@student.Nationality</td>
-                                    <td>@student.Religion</td>
+                                    <td>@student.Student.PIN</td>
+                                    <td>@student.Student.FirstName</td>
+                                    <td>@student.Student.LastName</td>
+                                    <td>@student.Student.Address</td>
+                                    <td>@student.ClassName</td>
+                                    <td>@student.Student.MobilePhoneNumber</td>
+                                    <td>@student.Student.PhoneNumber</td>
+                                    <td>@student.Student.Nationality</td>
+                                    <td>@student.Student.Religion</td>
                                 </tr>
                             }
                         </tbody>
