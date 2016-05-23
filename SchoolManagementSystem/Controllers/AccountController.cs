@@ -131,7 +131,10 @@ namespace SchoolManagementSystem.Controllers
             repository.AddClass(new Class { Name = "11-B" });
 
             List<Class> classes = repository.Classes.ToList();
+            List<Class> classesCristina = repository.Classes.Take(2).ToList();
+
             repository.AddTeacher(new Teacher { PIN = "2021", FirstName = "Emma", LastName = "Watson", Password = "123", Discipline_Id = 1, EducationalGrade = "USM Biology faculty", ClassesToStudy = classes });
+            repository.AddTeacher(new Teacher { PIN = "2022", FirstName = "Cristina", LastName = "Purice", Password = "123", Discipline_Id = 3, EducationalGrade = "USM Mathematic and Informatics faculty", ClassesToStudy = classesCristina });
 
 
             repository.AddDiscipline(new Discipline { Subject = "Biology" });

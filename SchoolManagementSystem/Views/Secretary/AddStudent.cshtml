@@ -1,6 +1,84 @@
-﻿@{
+﻿@model List<SchoolManagementSystem.Domain.Entities.Class>
+@{
     ViewBag.Title = "AddStudent";
     Layout = "~/Views/Secretary/SecretaryLayout.cshtml";
 }
 
-<h2>AddStudent</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Add Student:</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+@if (ViewBag.message != "" && ViewBag.message != null)
+{
+    <h3 class="text-info">@ViewBag.message</h3>
+}
+
+<div class="col-lg-5">
+    @using (Html.BeginForm("AddStudent", "Secretary"))
+    {
+        <div class="row form-group">
+            <label>PIN:</label>
+            <input class="form-control" type="text" name="PIN" required value="">
+        </div>
+
+        <div class="row form-group">
+            <label>Password:</label>
+            <input class="form-control" type="text" name="Password" required value="">
+        </div>
+
+        <div class="row form-group">
+            <label>First Name:</label>
+            <input class="form-control" type="text" name="FirstName" required value="">
+        </div>
+
+        <div class="row form-group">
+            <label>Last Name:</label>
+            <input class="form-control" type="text" name="LastName" required value="">
+        </div>
+
+        <div class="row form-group">
+            <label>Address:</label>
+            <input class="form-control" type="text" name="Address" value="">
+        </div>
+
+        <div class="row form-group">
+            <label>Phone Number:</label>
+            <input class="form-control" type="text" name="PhoneNumber" value="">
+        </div>
+
+        <div class="row form-group">
+            <label>Mobile Phone:</label>
+            <input class="form-control" type="text" name="MobilePhoneNumber" value="">
+        </div>
+
+        <div class="row form-group">
+            <label >Nationality:</label>
+            <input class="form-control" type="text" name="Nationality" value="">
+        </div>
+
+        <div class="row form-group">
+            <label >Religion:</label>
+            <input class="form-control" type="text" name="Religion" value="">
+        </div>
+
+        <div class="row form-group" style="max-width: 150px">
+            <label> Select Class:</label>
+            <select name="Class_Id" class="form-control" required id="sel2">
+                @foreach (var classItem in @Model)
+                {
+                    <option value="@classItem.Id">@classItem.Name</option>
+
+                }
+            </select>
+        </div>
+
+        
+        <button class="btn btn-success" type="submit">Save</button>
+    }
+    <br/>
+<br/>
+</div>
+
